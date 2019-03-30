@@ -1,0 +1,32 @@
+{
+  "name": "worker-polyfill",
+  "version": "1.0.0",
+  "description": "Polyfill for the Web Worker API that works in Internet Explorer and other old browsers that don't support this API",
+  "main": "lib/worker-polyfill.js",
+  "scripts": {
+    "prebuild": "rimraf lib",
+    "build": "webpack --mode=production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pmarfany/worker-polyfill.git"
+  },
+  "keywords": [
+    "worker",
+    "polyfill",
+    "ie"
+  ],
+  "author": "Pau Marfany",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pmarfany/worker-polyfill/issues"
+  },
+  "homepage": "https://github.com/pmarfany/worker-polyfill#readme",
+  "devDependencies": {
+    "awesome-typescript-loader": "^5.2.1",
+    "rimraf": "^2.6.3",
+    "typescript": "^3.4.1",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.3.0"
+  }
+}

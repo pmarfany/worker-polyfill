@@ -1,22 +1,24 @@
+# worker-polyfill
+
 A simple script that emulates web worker threads in non compatible browsers.
 The code will still be slow (single threaded) but you can keep you code consistent.
 
 Usage:
-```
+```js
 // You must check for compatibility before loading the polyfill
 if ( !Worker ) { require('worker-loader'); }
 ```
 
 Workers can be loaded and used as usual:
-```
+```js
 var worker = new Worker("your_script.js");  
 
 worker.onmessage = function(event) {  
-	alert("Got: " + event.data);  
+    alert("Got: " + event.data);  
 };  
 
 worker.onerror = function(error) {  
-	alert("Worker error: " + error);  
+    alert("Worker error: " + error);  
 };
 
 worker.postMessage("Hello World"); 
@@ -24,15 +26,15 @@ worker.postMessage("Hello World");
 
 'addEventListener' methods are also supported:
 
-```
+```js
 var worker = new Worker("your_script.js");
 
 worker.addEventListener("message", function(event) {  
-	alert("Got: " + event.data);  
+    alert("Got: " + event.data);  
 });
 
 worker.addEventListener("error", function(error) {  
-	alert("Worker error: " + error);  
+    alert("Worker error: " + error);  
 });
 
 worker.postMessage("Hello World");
